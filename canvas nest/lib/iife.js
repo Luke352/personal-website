@@ -9,7 +9,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var getScriptConfig = function getScriptConfig() {
   var scripts = document.getElementsByTagName('script');
   var len = scripts.length;
-  var script = scripts[len - 1]; // 当前加载的script
+  var script = scripts[len - 1]; 
   return {
     zIndex: script.getAttribute('zIndex'),
     opacity: script.getAttribute('opacity'),
@@ -17,9 +17,5 @@ var getScriptConfig = function getScriptConfig() {
     pointColor: script.getAttribute('pointColor'),
     count: Number(script.getAttribute('count')) || 99
   };
-}; /**
-    * Created by hustcc on 18/6/23.
-    * Contract: i@hust.cc
-    */
-
+}; 
 new _CanvasNest2.default(document.body, getScriptConfig());

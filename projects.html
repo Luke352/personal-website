@@ -19,35 +19,13 @@
             <li><a href="home.html">home</a></li>
             <li><a href="about.html">about</a></li>
             <li><a href="resume.html">resume</a></li>
-            <li><a href="projects.html">project</a></li>
+            <li><a href="projects.html">projects</a></li>
             <li><a href="contact.html">contact</a></li>
           </ul>
         </nav>
       </header>      
     <main>
     </main>
-    <div id="aboutSection">
-      <div id="about-me-chat">
-        <p class="send">Hi Luke! I've stumbled onto your website and I wanted to learn a bit more about you</p>
-        <p class="receive">Of course! I'm an IT Specialist based in Tuscaloosa, Alabama. I'm young and new to the industry, but I've got an insatiable hunger for knowledge and I do my best to learn something new everyday</p>
-        <p class="send">Where are you working, currently?</p>
-        <p class="receive">The University of Alabama - Roll Tide!</p>
-        <p class="send">Roll Tide! Every other college football team is trash -- I agree</p>
-        <p class="send">I'm not able to pick up a dialect over these <em>totally not fake</em> text messages, where are you from?</p>
-        <p class="receive">Hahaha, I'm from North Carolina originally, but spent most of my formative years in central Florida</p>
-        <p class="send">Oh very cool, the east coast rules. What are your hobbies outside of work?</p>
-        <p class="send">Oh wait, let me guess! You like teaching youreself to code, when you're not hiking or gaming?</p>
-        <p class="receive">Are you a psychic? 😳</p>
-        <p class="send">🔮🧙‍♀️</p>
-        <p class="receive">Quick, how many cats do I have, and what are their names??</p>
-        <p class="send">You have four cats, and their names are Finnegan, Poo Poo, Miss Priss, and Cooper</p>
-        <p class="receive">WOAH</p>
-        <p class="receive">You ARE psychic!</p>
-        <p class="send">Hahaha, told you!</p>
-        <p class="send">We'll definitely be in touch, your website looks great btw!</p>
-        <p class="receive">Aw, you're making me blush... If you have any other questions, I'd be more than happy to fill you in; dont hesistate to reach out!</p>
-      </div>
-    </div> 
     <ul class="wrapper">
       <li class="icon facebook">
         <span class="tooltip">Facebook</span>
@@ -74,9 +52,28 @@
     <div id="social-links-PFP">
       <img class="profile-picture" src="assets/headshot.png"></div>
 
+    <div class="composition1">
+            <img class="composition1_photo composition1_photo--p1" src="assets/vscode-ss1.png"></img>
+            <img class="composition1_photo composition1_photo--p2" src="assets/vscode-ss3.png"></img>
+            <img class="composition1_photo composition1_photo--p3" src="assets/gh-repo-ss2.png"></img>
+            <img class="composition1_photo composition1_photo--p4" src="assets/gh-repo-ss1.png"></img>
+            <img class="composition1_photo composition1_photo--p5" src="assets/vscode-ss2.png"></img>
+
+            <div class="card" tabindex="0">
+              <span class="card__infoicon">
+                <i class="fa fa-circle-info fa-lg"></i>
+              </span>
+              <h1 class="card__title">Current Project</h1>
+              <p class="card__description">I'm currently working on my pilot project, which is the website you're interacting with right now!</p>
+              
+              <p class="card__credits"></p>
+              
+              <p class="card__description">Check out my Github, for a deeper look into the source code!</p>
+            </div>
+    </div>    
     <div class="checkbox-container" style="position: absolute; top: -5px; right: 10px;">
       <input type="checkbox">
-    </div>  
+    </div> 
     <footer>
     </footer>
   </body>
@@ -87,5 +84,8 @@
   zIndex="-2" 
   count="110" 
   src="canvas nest/dist/canvas-nest.js">
-</script>
+  </script>
+  <script type="module">
+  import { Octokit, App } from "https://cdn.skypack.dev/octokit";
+  </script>
 </html>

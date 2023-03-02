@@ -10,9 +10,6 @@ var _CanvasNest2 = _interopRequireDefault(_CanvasNest);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _CanvasNest2.default; /**
-                                         * Created by hustcc on 18/6/23.
-                                         * Contract: i@hust.cc
-                                         */
+exports.default = _CanvasNest2.default; 
 
 module.exports = exports['default'];

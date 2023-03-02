@@ -10,40 +10,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />  </head>
   <body>
     <header>
         <nav>
-          <ul>
+          <ul class="nav">
             <li><a href="home.html">home</a></li>
             <li><a href="about.html">about</a></li>
             <li><a href="resume.html">resume</a></li>
-            <li><a href="portfolio.html">portfolio</a></li>
+            <li><a href="projects.html">projects</a></li>
             <li><a href="contact.html">contact</a></li>
           </ul>
         </nav>
       </header>      
     <main>
     </main>
-    <img class="profile-picture" src="assets/headshot.png">
-    <div id="chatBubble-social-links">
-      <a href="https://twitter.com/qwrtls"><img class="twitter-icon" src="assets/twitter-icon.png"></a>
-      <a href="https://linkedin.com/in/luke-alexander-a32927214"><img class="linkedin-icon" src="assets/linkedin-icon.png"></a>
-      <a href="mailto:mailto:luke.alexander352@gmail.com"><img class="gmail-icon" src="assets/gmail-icon.png"></a>
-    </div>
-    <div id="infoSection">
+    <ul class="wrapper">
+      <li class="icon facebook">
+        <span class="tooltip">Facebook</span>
+        <span><a href="https://www.facebook.com/luke.alexander.71/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></span>
+      </li>
+      <li class="icon twitter">
+        <span class="tooltip">Twitter</span>
+        <span><a href="https://twitter.com/qwrtls" target="_blank"><i class="fa-brands fa-twitter"></i></a></span>
+      </li>
+      <li class="icon instagram">
+        <span class="tooltip">Instagram</span>
+        <span><a href="https://www.instagram.com/wh_tever" target="_blank"><i class="fa-brands fa-instagram"></i></a></span>
+      </li>
+      <li class="icon github">
+        <span class="tooltip">Github</span>
+        <span><a href="https://www.github.com/luke352" target="_blank"><i class="fa-brands fa-github"></i></a></span>
+      </li>
+      <li class="icon youtube">
+        <span class="tooltip">Mail</span>
+        <span><a href="mailto:mailto:luke.alexander352@gmail.com" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a></span>
+      </li>
+    </ul>
+
+    <div id="social-links-PFP">
+      <img class="profile-picture" src="assets/headshot.png"></div>
+
+    <div id="contactSection">
       <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
         <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" className="form-control" />
+            <input type="text" className="form-control" placeholder="Jane Doe" />
         </div>
         <div className="form-group">
             <label htmlFor="exampleInputEmail1">Email address</label>
-            <input type="email" className="form-control" aria-describedby="emailHelp" />
+            <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="jane-doe@me.com" />
         </div>
         <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea className="form-control" rows="10"></textarea>
+            <textarea className="form-control" rows="10" placeholder="Luke, are birds real?" ></textarea>
         </div>
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
@@ -52,15 +72,14 @@
       <input type="checkbox">
     </div>  
     <footer>
-      <p>Copyright © 2023 Luke Alexander</p>
     </footer>
   </body>
   <script src="app.js"></script>
   <script 
   color="255,255,255" 
-  opacity='0.97' 
+  opacity='1' 
   zIndex="-2" 
-  count="100" 
+  count="110" 
   src="canvas nest/dist/canvas-nest.js">
 </script>
 </html>

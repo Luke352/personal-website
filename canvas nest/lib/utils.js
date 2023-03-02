@@ -3,10 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/**
- * Created by hustcc on 18/6/23.
- * Contract: i@hust.cc
- */
 
 var requestAnimationFrame = exports.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame || function (func) {
   return window.setTimeout(func, 1000 / 60);

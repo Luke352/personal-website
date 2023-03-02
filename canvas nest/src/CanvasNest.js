@@ -1,7 +1,3 @@
-/**
- * Created by hustcc on 18/6/23.
- * Contract: i@hust.cc
- */
 
 import { bind, clear } from 'size-sensor';
 import { requestAnimationFrame, cancelAnimationFrame, range, canvasStyle } from './utils';
@@ -14,11 +10,11 @@ export default class CanvasNest {
     this.el = el;
 
     this.c = {
-      zIndex: -1,           // z-index
-      opacity: 0.5,         // opacity
-      color: '0,0,0',       // color of lines
-      pointColor: '0,0,0',  // color of points
-      count: 99,            // count
+      zIndex: -1,       
+      opacity: 0.5,         
+      color: '0,0,0',       
+      pointColor: '0,0,0',  
+      count: 99,            
       ...config,
     };
 
@@ -27,9 +23,9 @@ export default class CanvasNest {
 
     this.points = this.randomPoints();
     this.current = {
-      x: null, // 当前鼠标x
-      y: null, // 当前鼠标y
-      max: 20000 // 圈半径的平方
+      x: null, 
+      y: null, 
+      max: 20000 
     };
     this.all = this.points.concat([this.current]);
 
@@ -46,8 +42,8 @@ export default class CanvasNest {
 
     this.onmousemove = window.onmousemove;
     window.onmousemove = e => {
-      this.current.x = e.clientX - this.el.offsetLeft + document.scrollingElement.scrollLeft; // 当存在横向滚动条时，x坐标再往右移动滚动条拉动的距离
-      this.current.y = e.clientY - this.el.offsetTop + document.scrollingElement.scrollTop; // 当存在纵向滚动条时，y坐标再往下移动滚动条拉动的距离
+      this.current.x = e.clientX - this.el.offsetLeft + document.scrollingElement.scrollLeft; 
+      this.current.y = e.clientY - this.el.offsetTop + document.scrollingElement.scrollTop; 
       this.onmousemove && this.onmousemove(e);
     };
 
@@ -63,9 +59,9 @@ export default class CanvasNest {
     return range(this.c.count).map(() => ({
       x: Math.random() * this.canvas.width,
       y: Math.random() * this.canvas.height,
-      xa: 2 * Math.random() - 1, // 随机运动返现
+      xa: 2 * Math.random() - 1, 
       ya: 2 * Math.random() - 1,
-      max: 6000 // 沾附距离
+      max: 6000 
     }));
   };
 
@@ -73,7 +69,7 @@ export default class CanvasNest {
     if (getComputedStyle(this.el).position === 'static') {
       this.el.style.position = 'relative'
     }
-    const canvas = document.createElement('canvas'); // 画布
+    const canvas = document.createElement('canvas'); 
     canvas.style.cssText = canvasStyle(this.c);
 
     canvas.width = this.el.clientWidth;
@@ -96,26 +92,26 @@ export default class CanvasNest {
     const all = this.all;
 
     context.clearRect(0, 0, width, height);
-    // 随机的线条和当前位置联合数组
-    let e, i, d, x_dist, y_dist, dist; // 临时节点
-    // 遍历处理每一个点
+
+    let e, i, d, x_dist, y_dist, dist; 
+    
     points.forEach((r, idx) => {
       r.x += r.xa;
-      r.y += r.ya; // 移动
+      r.y += r.ya; 
       r.xa *= r.x > width || r.x < 0 ? -1 : 1;
-      r.ya *= r.y > height || r.y < 0 ? -1 : 1; // 碰到边界，反向反弹
+      r.ya *= r.y > height || r.y < 0 ? -1 : 1; 
       context.fillStyle = `rgba(${this.c.pointColor})`;
-      context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); // 绘制一个宽高为1的点
-      // 从下一个点开始
+      context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); 
+      
       for (i = idx + 1; i < all.length; i ++) {
         e = all[i];
-        // 当前点存在
+        
         if (null !== e.x && null !== e.y) {
-          x_dist = r.x - e.x; // x轴距离 l
-          y_dist = r.y - e.y; // y轴距离 n
-          dist = x_dist * x_dist + y_dist * y_dist; // 总距离, m
+          x_dist = r.x - e.x; 
+          y_dist = r.y - e.y; 
+          dist = x_dist * x_dist + y_dist * y_dist; 
 
-          dist < e.max && (e === current && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), // 靠近的时候加速
+          dist < e.max && (e === current && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), 
             d = (e.max - dist) / e.max,
             context.beginPath(),
             context.lineWidth = d / 2,
@@ -130,17 +126,17 @@ export default class CanvasNest {
   }
 
   destroy() {
-    // 清除事件
+    
     clear(this.el);
 
-    // mouse 事件清除
-    window.onmousemove = this.onmousemove; // 回滚方法
+    
+    window.onmousemove = this.onmousemove; 
     window.onmouseout = this.onmouseout;
 
-    // 删除轮询
+   
     cancelAnimationFrame(this.tid);
 
-    // 删除 dom
+    
     this.canvas.parentNode.removeChild(this.canvas);
   }
 }

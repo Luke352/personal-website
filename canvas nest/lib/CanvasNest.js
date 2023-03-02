@@ -6,10 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Created by hustcc on 18/6/23.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * Contract: i@hust.cc
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); 
 
 var _sizeSensor = require('size-sensor');
 
@@ -28,9 +25,9 @@ var CanvasNest = function () {
         return {
           x: Math.random() * _this.canvas.width,
           y: Math.random() * _this.canvas.height,
-          xa: 2 * Math.random() - 1, // 随机运动返现
+          xa: 2 * Math.random() - 1, 
           ya: 2 * Math.random() - 1,
-          max: 6000 // 沾附距离
+          max: 6000 
         };
       });
     };
@@ -38,10 +35,10 @@ var CanvasNest = function () {
     this.el = el;
 
     this.c = _extends({
-      zIndex: -1, // z-index
-      opacity: 0.5, // opacity
-      color: '0,0,0', // color of lines
-      pointColor: '0,0,0', // color of points
+      zIndex: -1, 
+      opacity: 0.5, 
+      color: '0,0,0', 
+      pointColor: '0,0,0', 
       count: 99 }, config);
 
     this.canvas = this.newCanvas();
@@ -49,9 +46,9 @@ var CanvasNest = function () {
 
     this.points = this.randomPoints();
     this.current = {
-      x: null, // 当前鼠标x
-      y: null, // 当前鼠标y
-      max: 20000 // 圈半径的平方
+      x: null, 
+      y: null, 
+      max: 20000 
     };
     this.all = this.points.concat([this.current]);
 
@@ -72,8 +69,8 @@ var CanvasNest = function () {
 
       this.onmousemove = window.onmousemove;
       window.onmousemove = function (e) {
-        _this2.current.x = e.clientX - _this2.el.offsetLeft + document.scrollingElement.scrollLeft; // 当存在横向滚动条时，x坐标再往右移动滚动条拉动的距离
-        _this2.current.y = e.clientY - _this2.el.offsetTop + document.scrollingElement.scrollTop; // 当存在纵向滚动条时，y坐标再往下移动滚动条拉动的距离
+        _this2.current.x = e.clientX - _this2.el.offsetLeft + document.scrollingElement.scrollLeft; 
+        _this2.current.y = e.clientY - _this2.el.offsetTop + document.scrollingElement.scrollTop; 
         _this2.onmousemove && _this2.onmousemove(e);
       };
 
@@ -90,7 +87,7 @@ var CanvasNest = function () {
       if (getComputedStyle(this.el).position === 'static') {
         this.el.style.position = 'relative';
       }
-      var canvas = document.createElement('canvas'); // 画布
+      var canvas = document.createElement('canvas'); 
       canvas.style.cssText = (0, _utils.canvasStyle)(this.c);
 
       canvas.width = this.el.clientWidth;
@@ -121,31 +118,31 @@ var CanvasNest = function () {
       var all = this.all;
 
       context.clearRect(0, 0, width, height);
-      // 随机的线条和当前位置联合数组
+      
       var e = void 0,
           i = void 0,
           d = void 0,
           x_dist = void 0,
           y_dist = void 0,
-          dist = void 0; // 临时节点
-      // 遍历处理每一个点
+          dist = void 0; 
+     
       points.forEach(function (r, idx) {
         r.x += r.xa;
-        r.y += r.ya; // 移动
+        r.y += r.ya; 
         r.xa *= r.x > width || r.x < 0 ? -1 : 1;
-        r.ya *= r.y > height || r.y < 0 ? -1 : 1; // 碰到边界，反向反弹
+        r.ya *= r.y > height || r.y < 0 ? -1 : 1; 
         context.fillStyle = 'rgba(' + _this4.c.pointColor + ')';
-        context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); // 绘制一个宽高为1的点
-        // 从下一个点开始
+        context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); 
+        
         for (i = idx + 1; i < all.length; i++) {
           e = all[i];
-          // 当前点存在
+          
           if (null !== e.x && null !== e.y) {
-            x_dist = r.x - e.x; // x轴距离 l
-            y_dist = r.y - e.y; // y轴距离 n
-            dist = x_dist * x_dist + y_dist * y_dist; // 总距离, m
+            x_dist = r.x - e.x; 
+            y_dist = r.y - e.y; 
+            dist = x_dist * x_dist + y_dist * y_dist; 
 
-            dist < e.max && (e === current && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), // 靠近的时候加速
+            dist < e.max && (e === current && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), 
             d = (e.max - dist) / e.max, context.beginPath(), context.lineWidth = d / 2, context.strokeStyle = 'rgba(' + _this4.c.color + ',' + (d + 0.2) + ')', context.moveTo(r.x, r.y), context.lineTo(e.x, e.y), context.stroke());
           }
         }
@@ -155,17 +152,17 @@ var CanvasNest = function () {
   }, {
     key: 'destroy',
     value: function destroy() {
-      // 清除事件
+      
       (0, _sizeSensor.clear)(this.el);
 
-      // mouse 事件清除
-      window.onmousemove = this.onmousemove; // 回滚方法
+      
+      window.onmousemove = this.onmousemove; 
       window.onmouseout = this.onmouseout;
 
-      // 删除轮询
+     
       (0, _utils.cancelAnimationFrame)(this.tid);
 
-      // 删除 dom
+      
       this.canvas.parentNode.removeChild(this.canvas);
     }
   }]);
