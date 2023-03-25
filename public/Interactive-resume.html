@@ -1,0 +1,949 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Luke Alexander - Resumea</title>
+    <meta name="keywords" content="Luke Alexander,resume,curriculum vitae,cv">
+    <meta name="description" content="Luke Alexander's Interactive Resume">
+    <meta property="og:title" content="Resume of Luke Alexander">
+    <meta property="og:type" content="document">
+    <meta property="og:url" content="https://www.luke-alexander.me">
+    <meta property="og:description" content="Luke Alexander's Interactive Resume">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://www.luke-alexander.me/">
+    <meta name="twitter:title" content="Resume of Luke Alexander">
+    <meta name="twitter:description" content="Luke Alexander's Interactive Resume">
+
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200&display=swap');
+      html,
+      body {
+        font-family: "Roboto Flex", sans-serif;
+        font-size: 2vmin;
+        color: #fff;
+      }
+      a:hover,
+      a:focus {
+        text-decoration: none;
+      }
+      main {
+        width: 55vmin;
+        height: 80vmin;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        background: #CA226B; 
+        color: #fff;
+      }
+      h2 {
+        font-size: 1.25rem;
+        height: 5vmin;
+        line-height: 7vmin;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        color: #fff;
+      }
+      main section,
+      main header {
+        overflow: hidden;
+        height: 7.5vmin;
+        position: relative;
+        box-sizing: border-box;
+        transition: height 0.5s;
+      }
+      main header::after,
+      main > div > section::after {
+        content: "";
+        position: absolute;
+        height: 2.5vmin;
+        width: 55vmin;
+        bottom: 0px;
+        left: 0;
+      }
+      .contact-2 {
+        display: none;
+      }
+
+      main header {
+        color: #fff;
+      }
+      main header:nth-child(1) {
+        background: #2a3439;
+        background-size: cover;
+      }
+     
+      main > div:nth-child(2) > section:nth-child(2) {
+        background: #0D98BA;
+        color: #ddeeff;
+      }
+      
+      main > div:nth-child(2) > section:nth-child(3) {
+        background: #ffc95d;
+        color: #fff;
+      }
+      
+      main > div:nth-child(2) > section:nth-child(4) {
+        background: #f0776c;
+        color: #fff;
+      }
+      
+      main > div:nth-child(2) > section:nth-child(5) {
+        background: #1abc9c;
+        color: #fff;
+      }
+     
+      h1 {
+        text-align: center;
+        color: #fff;
+        transition: 0.5s;
+        line-height: 8vmin;
+      }
+      header #objective {
+        padding: 1.5rem;
+      }
+      #contact-mini a {
+        display: block;
+        text-align: center;
+        color: #fff;
+      }
+      input {
+        position: absolute;
+        top: -1000px;
+        left: -1000px;
+      }
+      h1 label,
+      h2 label,
+      h3 label {
+        cursor: pointer;
+      }
+      #section-0:not(:checked) ~ main h1 {
+        margin-top: 0;
+      }
+      #section-0:checked ~ main header {
+        height: 42.5vmin;
+      }
+      #section-1:checked ~ main > div:nth-child(1) > section:nth-child(2) {
+        height: 42.5vmin;
+      }
+      #section-2:checked ~ main > div:nth-child(2) > section:nth-child(2) {
+        height: 42.5vmin;
+      }
+      #section-3:checked ~ main > div:nth-child(2) > section:nth-child(3) {
+        height: 42.5vmin;
+      }
+      #section-4:checked ~ main > div:nth-child(2) > section:nth-child(4) {
+        height: 42.5vmin;
+      }
+      #section-5:checked ~ main > div:nth-child(2) > section:nth-child(5) {
+        height: 42.5vmin;
+      }
+      h3 {
+        text-align: center;
+      }
+      .dept {
+        display: none;
+      }
+      main > div:nth-child(1) > section:nth-child(2) ul {
+        font-size: 0.9em;
+      }
+      main > div:nth-child(1) > section:nth-child(2) h2 {
+        width: 55vmin;
+      }
+      main > div:nth-child(1) > section:nth-child(2) section h3,
+      main > div:nth-child(1) > section:nth-child(2) section h4,
+      main > div:nth-child(1) > section:nth-child(2) section h4 span {
+        margin: 0;
+        text-align: center;
+        display: block;
+      }
+      main > div:nth-child(1) > section:nth-child(2) section {
+        width: 55vmin;
+        height: 33vmin;
+        box-sizing: border-box;
+        padding: 0 1.5rem;
+        float: left;
+      }
+      #experience-container {
+        width: 400%;
+        overflow: hidden;
+        position: absolute;
+        transition: left 0.5s;
+        left: 0;
+      }
+
+      main > div:nth-child(2) > section > ul {
+        padding-left: 5vmin;
+      }
+      main
+        > div:nth-child(2)
+        > section:nth-child(n + 3)
+        > ul
+        > li:nth-child(n + 2) {
+        margin-top: 1rem;
+      }
+
+      main > div:nth-child(2) > section > ul > li a {
+        color: white;
+      }
+      main > div:nth-child(2) > section > ul > li a:hover {
+        text-decoration: none;
+      }
+      #edu-certs {
+        color: #fff;
+      }
+      #volunteering {
+        color: #fff;
+        
+      }
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        right: 0.5rem;
+        overflow: hidden;
+        font-size: 3rem;
+        transition: all 0.5s;
+        cursor: pointer;
+      }
+      .prev {
+        right: auto;
+        left: 0.5rem;
+      }
+      .prev span,
+      .next span {
+        position: absolute;
+        top: -100000px;
+        left: -10000px;
+      }
+
+      .prev:hover,
+      .next:hover {
+        color: #fff;
+        text-shadow: 0 -1px #fff, 1px -1px #fff, 1px 0 #fff, 1px 1px #fff,
+          0 1px #fff, -1px 1px #fff, -1px 0 #fff, -1px -1px #fff, 0 0 2px #fff;
+      }
+      #work-0:checked ~ main #experience-container {
+        left: 0;
+      }
+      main #experience-container section,
+      main #languages,
+      main #edu-certs > ul,
+      main #volunteering > ul,
+      main #additional-links > ul {
+        opacity: 0;
+        margin-top: 3rem;
+        transition: all 0.75s;
+        transition-delay: 0.25s;
+      }
+      #section-1:checked ~ main #experience-container section,
+      #section-2:checked ~ main #languages,
+      #section-3:checked ~ main #edu-certs > ul,
+      #section-4:checked ~ main #volunteering > ul,
+      #section-5:checked ~ main #additional-links > ul {
+        opacity: 1;
+        margin-top: 0;
+      }
+      #work-1:checked ~ main #experience-container {
+        left: -55vmin;
+      }
+      #work-2:checked ~ main #experience-container {
+        left: -110vmin;
+      }
+      #work-3:checked ~ main #experience-container {
+        left: -165vmin;
+      }
+      #languages {
+        column-count: 2;
+        font-size: 1.25rem;
+        list-style: none;
+      }
+      .educert > li > span,
+      #volunteering > ul > li > span {
+        font-size: 1.25rem;
+        color: #fff;
+      }
+
+      @media (orientation: portrait) and (max-width: 500px) {
+        html,
+        body {
+          font-size: 2.8vmin;
+        }
+        main {
+          width: 80vmin;
+          height: 115vmin;
+        }
+        main header::after,
+        main > div > section::after {
+          width: 80vmin;
+        }
+        #section-0:checked ~ main header {
+          height: 77.5vmin;
+        }
+        #section-1:checked ~ main > div:nth-child(1) > section:nth-child(2) {
+          height: 77.5vmin;
+        }
+        #section-2:checked ~ main > div:nth-child(2) > section:nth-child(2) {
+          height: 77.5vmin;
+        }
+        #section-3:checked ~ main > div:nth-child(2) > section:nth-child(3) {
+          height: 77.5vmin;
+        }
+        #section-4:checked ~ main > div:nth-child(2) > section:nth-child(4) {
+          height: 77.5vmin;
+        }
+        #section-5:checked ~ main > div:nth-child(2) > section:nth-child(5) {
+          height: 77.5vmin;
+        }
+        main > div:nth-child(2) > section > ul {
+          padding-left: 10vmin;
+        }
+        main > div:nth-child(1) > section:nth-child(2) section {
+          width: 80vmin;
+          height: 60vmin;
+          padding: 7.5vmin;
+        }
+        #work-0:checked ~ main #experience-container {
+          left: 0;
+        }
+        #work-1:checked ~ main #experience-container {
+          left: -80vmin;
+        }
+        #work-2:checked ~ main #experience-container {
+          left: -160vmin;
+        }
+        #work-3:checked ~ main #experience-container {
+          left: -240vmin;
+        }
+        main > div:nth-child(1) > section:nth-child(2) h2 {
+          width: 80vmin;
+        }
+      }
+    </style>
+    <style>
+      @media print {
+        @page {
+          size: letter;
+        }
+        main #experience-container section,
+        main #languages,
+        main #edu-certs > ul,
+        main #volunteering > ul,
+        main #additional-links > ul {
+          opacity: 1;
+          margin-top: 0.75rem !important;
+        }
+        #languages li:nth-child(n + 9) {
+          display: none;
+        }
+        .educert > li > span,
+        #volunteering > ul > li > span,
+        .educert > li > a {
+          font-size: 1rem;
+          color: #444;
+          font-weight: bold;
+        }
+        main > div:nth-child(1) > section:nth-child(2),
+        #experience-container,
+        main > div:nth-child(1) > section:nth-child(2) > h2,
+        main > div:nth-child(1) > section:nth-child(2) section,
+        main > div:nth-child(1) > section:nth-child(2) section h3,
+        main > div:nth-child(1) > section:nth-child(2) section h4 {
+          width: auto;
+          float: none;
+          padding: 0;
+          text-align: left;
+          left: 0 !important ;
+          height: auto;
+          position: relative;
+        }
+        main > div:nth-child(1) > section:nth-child(2) section h4 span {
+          display: inline-block;
+        }
+        main
+          > div:nth-child(2)
+          > section:nth-child(n + 3)
+          > ul
+          > li:nth-child(n + 2) {
+          margin-top: inherit;
+        }
+        main > div:nth-child(1) > section:nth-child(2) ul {
+          font-size: 1em;
+        }
+        main > div:nth-child(2) > section > ul > li a {
+          color: inherit;
+        }
+        main > div:nth-child(2) > section > ul {
+          padding-left: 0;
+        }
+        .prev,
+        .next {
+          display: none !important;
+        }
+        main {
+          background: #fff;
+          box-sizing: border-box;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+          margin: 2rem auto;
+          padding: 2.75rem;
+          position: relative;
+          width: auto;
+          height: auto;
+          top: auto;
+          left: auto;
+          transform: none;
+          -webkit-transform: none;
+        }
+
+        main::after {
+          display: none;
+        }
+
+        main section,
+        main header {
+          height: auto !important;
+          background: rgba(255, 255, 255, 0) !important;
+          box-shadow: none;
+          color: #000;
+          margin: auto;
+          padding: auto;
+        }
+
+        header #objective {
+          padding: 0;
+        }
+
+        main header::after,
+        main section::after {
+          display: none;
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 2.5rem;
+          line-height: 2rem;
+          font-weight: normal;
+          color: #000;
+          text-align: left;
+        }
+
+        h2 {
+          color: #47a;
+          font-size: 1rem;
+          font-weight: bold;
+          margin: 0;
+          margin-top: 1.5rem;
+          text-transform: uppercase;
+          line-height: 1.2rem;
+          height: auto;
+          text-align: left;
+        }
+
+        h3 {
+          color: #111;
+          font-size: 1.25rem;
+          margin-top: 0rem;
+          margin: 0;
+          font-weight: normal;
+          text-align: left;
+        }
+
+        h3 span.dept {
+          color: #aaa;
+          display: inline-block;
+        }
+
+        h3 span.dept::before {
+          content: "";
+          border-left: 1px solid #ccc;
+          padding-left: 0.4rem;
+        }
+
+        h4 {
+          margin: 0;
+          font-weight: normal;
+        }
+
+        h4 span.dates {
+          color: #888;
+          display: inline-block;
+        }
+
+        p {
+          font-size: 1rem;
+          margin-top: 0.5rem;
+          margin-bottom: 0;
+        }
+
+        a {
+          color: #369;
+        }
+
+        a:hover {
+          color: #36c;
+        }
+
+        time {
+          display: inline-block;
+          min-width: 2rem;
+        }
+
+        address {
+          font-style: normal;
+          display: block;
+        }
+
+        .normal {
+          font-weight: normal;
+        }
+
+        .position {
+          margin-top: 0.75rem;
+          transition: opacity 0.7s;
+        }
+
+        .no-bullets,
+        .no-bullets ul {
+          list-style: none;
+          margin-left: 0;
+          padding-left: 0;
+          color: #000;
+          font-weight: normal;
+        }
+        .no-bullets ul {
+          font-weight: normal;
+        }
+        .no-bullets span {
+          color: #666;
+        }
+
+        #contact {
+          text-align: right;
+          font-size: 0.9rem;
+        }
+
+        #phone {
+          font-size: 1.25rem;
+          font-weight: bold;
+          text-decoration: none !important;
+        }
+
+        #location {
+          font-size: 1.1rem;
+        }
+
+        #languages {
+          column-count: 4;
+          font-size: 1rem;
+        }
+
+        #professional-experience {
+          position: relative;
+        }
+
+        .educert {
+          display: flex;
+        }
+        .educert li {
+          flex: 1;
+          align-items: top;
+          justify-content: top;
+        }
+
+        label {
+          cursor: pointer;
+        }
+
+        #contact-mini {
+          display: flex;
+          margin-top: 1rem;
+        }
+
+        #contact-mini > div {
+          font-size: 0.75rem;
+          flex: 1;
+        }
+
+        #contact-mini > div:nth-child(2) {
+          text-align: center;
+          flex: 2;
+        }
+        #contact-mini > div:last-child {
+          text-align: right;
+        }
+
+        #contact {
+          display: none;
+        }
+
+        @media all and (min-width: 630px) {
+          main {
+            max-width: 600px;
+          }
+          #contact-mini > div {
+            font-size: 1rem;
+          }
+        }
+
+        @media all and (min-width: 1000px) {
+          html,
+          body {
+            font-size: 16px;
+          }
+          main {
+            max-width: 920px;
+            display: flex;
+          }
+          main > div:first-child {
+            flex: 1;
+          }
+          main > div:last-child {
+            width: 21%;
+            margin-left: 4%;
+          }
+          #languages {
+            column-count: 1;
+          }
+          .educert {
+            display: block;
+          }
+          .educert > li:nth-child(n + 2) {
+            margin-top: 0.75rem;
+          }
+          #contact-mini {
+            display: none;
+          }
+          #contact {
+            display: block;
+          }
+          #email,
+          #website {
+            font-size: 0.9em;
+          }
+        }
+
+        @media all and (min-width: 1200px) {
+          html,
+          body {
+            font-size: 18px;
+          }
+          main {
+            max-width: 1120px;
+          }
+          #email,
+          #website {
+            font-size: 1em !important;
+          }
+        }
+        html,
+        body {
+          background: #fff;
+          font-size: 16px;
+          width: 900px;
+        }
+        a,
+        a:visited,
+        a:link,
+        a:active,
+        a:focus,
+        #languages label {
+          text-decoration: none;
+          color: #000;
+        }
+        main {
+          margin: 0;
+          max-width: 920px;
+          display: flex;
+          box-shadow: none;
+        }
+        main > div:first-child {
+          flex: 1;
+        }
+        main > div:last-child {
+          width: 21%;
+          margin-left: 4%;
+        }
+        #languages {
+          column-count: 1;
+        }
+        .educert {
+          display: block;
+        }
+        .educert > li:nth-child(n + 2) {
+          margin-top: 0.75rem;
+        }
+        .position {
+          opacity: 1 !important;
+        }
+        #contact-mini {
+          display: none;
+        }
+        #contact {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input aria-hidden="true" tabindex="-1" type="radio" name="section" id="section-0" checked="">
+    <input aria-hidden="true" tabindex="-1" type="radio" name="section" id="section-1">
+    <input aria-hidden="true" tabindex="-1" type="radio" name="section" id="section-2">
+    <input aria-hidden="true" tabindex="-1" type="radio" name="section" id="section-3">
+    <input aria-hidden="true" tabindex="-1" type="radio" name="section" id="section-4">
+    <input aria-hidden="true" tabindex="-1" type="radio" name="section" id="section-5">
+
+    <input aria-hidden="true" tabindex="-1" type="radio" name="work" id="work-0">
+    <input aria-hidden="true" tabindex="-1" type="radio" name="work" id="work-1">
+    <input aria-hidden="true" tabindex="-1" type="radio" name="work" id="work-2">
+    <input aria-hidden="true" tabindex="-1" type="radio" name="work" id="work-3">
+    <main id="resume" itemscope="" itemtype="http://schema.org/Person">
+      <div>
+        <header>
+          <h1 itemprop="name"><label for="section-0">Luke Alexander</label></h1>
+          <p id="objective" itemprop="description">
+           <span itemprop="jobTitle">IT SysAdmin</span> with
+            strong experience administrating and deploying
+            <span itemprop="knowsAbout">specialized, scalable, high-performance hardware and software at the enterprise level </span>
+            seeking
+            <span itemprop="seeks">associate level administrator opportunities</span>.
+          </p>
+          <address id="contact-mini">
+            <div itemprop="email">
+              <a href="mailto:luke.alexander352@gmail.com">luke.alexander352@gmail.com</a>
+            </div>
+            <a href="tel:+13522137166"><span itemprop="telephone">(352) 213-7166</span></a>
+            <div>
+              <a rel="external author" href="https://luke-alexander.me" itemprop="url">luke-alexander.me</a>
+            </div>
+          </address>
+        </header>
+
+        <section id="professional-experience">
+          <h2><label for="section-1">Experience</label></h2>
+          <div id="experience-container">
+            <section itemprop="memberOf" itemscope="" itemtype="http://schema.org/Organization" class="position reactjs html css javascript kotlin a11y less api">
+              <h3>
+                <span itemprop="name">The University of Alabama</span>
+                <span class="dept" itemprop="department">eTech: Collge of Arts and Sciences</span>
+              </h3>
+              <h4 itemprop="member" itemscope="" itemtype="http://schema.org/OrganizationRole">
+                <span itemprop="roleName">IT Systems Specialist III</span>
+                <span class="dates">
+                  <time itemprop="startDate">2022</time>
+                  -
+                  <time></time>
+                </span>
+              </h4>
+              <ul itemprop="description">
+                <li>
+                  Led the iPad / Mac deployment initiatives at the largest college within the largest university in the SEC 
+                </li>
+                <li>
+                  Responsible for the packaging, management and deployment of enterprise software housed on over 10,000 machines via Microsoft SCCM, JAMF, Microsoft Intune, PDQ, VMWare, Active Directory etc
+                </li>
+                <li>
+                  Cultivated exceptional management skills whilst leading bi-weekly logistics meetings and delegating tasks via Asana / Monday to 6+ student workers at any given time. 
+                </li>
+              </ul>
+              <label for="work-1" class="next">
+                › <span>Next job experience</span>
+              </label>
+            </section>
+
+            <section itemprop="memberOf" itemscope="" itemtype="http://schema.org/Organization" class="position java javascript html css jquery cq5 aem seo a11y mobile sass">
+              <h3>
+                <span itemprop="name">University of Florida: Health</span>
+                <span class="dept" itemprop="department">Rocky Point: Pathology Labs</span>
+              </h3>
+              <h4 itemprop="member" itemscope="" itemtype="http://schema.org/OrganizationRole">
+                <span itemprop="roleName">Priority Specimen Courier</span>
+                <span class="dates">
+                  <time itemprop="startDate">2020</time>
+                  -
+                  <time itemprop="endDate">2022</time>
+                </span>
+              </h4>
+              <ul itemprop="description">
+                <li>
+                  Provided punctual Courier services for the highest highest volume pathology laboratory within the UF Health Ecosystem.
+                </li>
+                <li>
+                  Tasked with the resposibility of safekeeping and transportation of high-profile specimens such as brains, blood and tumors.
+                </li>
+                <li>
+                  Learned how to work efficiently in an autonomous work setting.
+                </li>
+              </ul>
+              <label for="work-0" class="prev">
+                ‹ <span>Previous job experience</span>
+              </label>
+              <label for="work-2" class="next">
+                › <span>Next job experience</span>
+              </label>
+            </section>
+
+            <section itemprop="memberOf" itemscope="" itemtype="http://schema.org/Organization" class="position php csharp mysql html javascript css jquery sqlserver sql a11y sass mobile api">
+              <h3>
+                <span itemprop="name">Dominos Inc.
+                </span>
+                <span class="dept" itemprop="department">Delivery Team</span>
+              </h3>
+              <h4 itemprop="member" itemscope="" itemtype="http://schema.org/OrganizationRole">
+                <span itemprop="roleName">Closing Shift Lead</span>
+                <span class="dates">
+                  <time itemprop="startDate">2019</time>
+                  -
+                  <time itemprop="endDate">2021</time>
+                </span>
+              </h4>
+              <ul itemprop="description">
+                <li>
+                  Excercised excellent time management and organizational skills to deliver products with little to no overhead -- as well as taking on managerial taks that were essential to a location with over $20,000 in daily sales to operate efficiently.
+                </li>
+                <li>
+                  Youngest shift lead of a store within my region.
+                </li>
+              </ul>
+              <label for="work-1" class="prev">
+                ‹ <span>Previous job experience</span>
+              </label>
+              <label for="work-3" class="next">
+                › <span>Next job experience</span>
+              </label>
+            </section>
+
+            <section itemprop="memberOf" itemscope="" itemtype="http://schema.org/Organization" class="position html javascript css jquery sqlserver sql csharp api">
+              <h3>
+                <span itemprop="name">University of Florida: Shands</span>
+                <span class="dept" itemprop="department">Craniofacial Clinic</span>
+              </h3>
+              <h4 itemprop="member" itemscope="" itemtype="http://schema.org/OrganizationRole">
+                <span itemprop="roleName">Administrative Professional</span>
+                <span class="dates">
+                  <time itemprop="startDate">2017</time>
+                  -
+                  <time itemprop="endDate">2019</time>
+                </span>
+              </h4>
+              <ul itemprop="description">
+                <li>
+                  Primary contact for the Pediatric Cranio-Facial clinic at the University of Florida - a practice with over 5000 patients
+                </li>
+                <li>
+                  After hire, streamlined efficiency by nearly double and was assigned to additional projects for ADD and Prenatal Clinics for Peds as well
+                </li>
+                <li>
+                  Spearheaded weekly clinics for 20+ patients and their parents offsite at the cancer hospital; Reposible for preparing materials for the families, as well as fielding questions and assigning providers based on perceived prognosis.
+                </li>
+              </ul>
+              <label for="work-2" class="prev">
+                ‹ <span>Previous job experience</span>
+              </label>
+            </section>
+          </div>
+        </section>
+      </div>
+      <div>
+        <address id="contact" class="contact-2">
+          <div id="location" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Tuscaloosa</span>,
+            <span itemprop="addressRegion">AL</span>
+          </div>
+          <a href="tel:+19174055831" id="phone">(352) 213-7166</a>
+          <div>
+            <a href="mailto:luke.alexander352@gmail.com" id="email">luke.alexander352@gmail.com</a>
+          </div>
+          <div>
+            <a href="https://luke-alexander.me" id="website">luke-alexander.me</a>
+          </div>
+        </address>
+
+        <section>
+          <h2><label for="section-2">Skills</label></h2>
+          <ul class="no-bullets" id="languages">
+            <li itemprop="knowsAbout">Time Management</li>
+            <li itemprop="knowsAbout">Communication</li>
+            <li itemprop="knowsAbout">Powershell</li>
+            <li itemprop="knowsAbout">Bash</li>
+            <li itemprop="knowsAbout">Active Directory</li>
+            <li itemprop="knowsAbout">SCCM</li>
+            <li itemprop="knowsAbout">PDQ</li>
+            <li itemprop="knowsAbout">SQL</li>
+            <li itemprop="knowsAbout">Troubleshooting</li>
+            <li itemprop="knowsAbout">HTML</li>
+            <li itemprop="knowsAbout">Azure</li>
+            <li itemprop="knowsAbout">C++</li>
+            <li itemprop="knowsAbout">Python</li>
+            <li itemprop="knowsAbout">CSS</li>
+            <li itemprop="knowsAbout">Javascript</li>
+            <li itemprop="knowsAbout">Computer Hardware</li>
+          </ul>
+        </section>
+
+        <section id="edu-certs">
+          <h2><label for="section-3">Education and Certifications</label></h2>
+          <ul class="no-bullets educert">
+            <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization">
+              <span itemprop="name">Santa Fe College</span>
+              <ul>
+                <li itemprop="award">A.S. Computer Science</li>
+                <li itemprop="award">Python, C++, Bash, Powershell</li>
+              </ul>
+            </li>
+            <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization">
+              <span itemprop="name">CompTIA A+</span>
+              <ul>
+                <li itemprop="award">Industry recognized A+ certification through 2025</li>
+              </ul>
+            </li>
+            <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization">
+              <span itemprop="name">Cloud Architect AWS</span>
+              <ul>
+                <li itemprop="award">Expected Completion date: December 2023</li>
+          </ul>
+        </section>
+
+        <section id="volunteering">
+          <h2><label for="section-4">Hobbies</label></h2>
+          <ul class="no-bullets">
+            <li>
+              <span>Front End Web Development</span>
+              <ul>
+                <li>
+                  In my free time, I like to challenge myself with personal projects in the UI / GUI Front end space<br>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span>Gaming</span>
+              <ul>
+                <li>
+                  A staple of the tech nerds personality; I take pride in this hobby, as I've met some of the best friends anyone could have throughout the years doing this<br>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span>Hiking</span>
+              <ul>
+                <li>
+                  After a trip to the Blue Ridge Mountains in January 2021, I've embarked on several different trips to mountains; disconnecting from reality is a liberating feeling that I feel everyone should prioritize.<br>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section id="additional-links">
+          <h2><label for="section-5">Download</label></h2>
+          <ul class="no-bullets educert">
+            <li>
+              <a href="/public/Luke_Alexander_IT_Specialist_III_2023_PDFVERSION.pdf" download="Luke_Alexander_Resume">Resume</a>      
+            </li>
+        </section>
+      </div>
+    </main>
+  
+
+</body></html>

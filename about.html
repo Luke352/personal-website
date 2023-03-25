@@ -16,11 +16,11 @@
     <header>
         <nav>
           <ul class="nav">
-            <li><a href="home.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="resume.html">resume</a></li>
-            <li><a href="projects.html">project</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a rel="preload" href="home.html" as="document">home</a></li>
+            <li><a rel="preload" href="about.html" as="document">about</a></li>
+            <li><a rel="preload" href="resume.html" as="document">resume</a></li>
+            <li><a rel="preload" href="projects.html" as="document">projects</a></li>
+            <li><a rel="preload" href="contact.html" as="document">contact</a></li>
           </ul>
         </nav>
       </header>      
@@ -29,7 +29,7 @@
     <div id="aboutSection">
       <div id="about-me-chat">
         <p class="send">Hi Luke! I've stumbled onto your website and I wanted to learn a bit more about you</p>
-        <p class="receive">Of course! I'm an IT Specialist based in Tuscaloosa, Alabama. I'm young and new to the industry, but I've got an insatiable hunger for knowledge and I do my best to learn something new everyday</p>
+        <p class="receive">Of course! I'm an IT SysAdmin based in Tuscaloosa, Alabama. I'm young and new to the industry, but I've got an insatiable hunger for knowledge and I do my best to learn something new everyday</p>
         <p class="send">Where are you working, currently?</p>
         <p class="receive">The University of Alabama - Roll Tide!</p>
         <p class="send">Roll Tide! Every other college football team is trash -- I agree</p>
@@ -45,7 +45,7 @@
         <p class="receive">You ARE psychic!</p>
         <p class="send">Hahaha, told you!</p>
         <p class="send">We'll definitely be in touch, your website looks great btw!</p>
-        <p class="receive">Aw, you're making me blush... If you have any other questions, I'd be more than happy to fill you in; dont hesistate to reach out!</p>
+        <p class="receive">Aw, you're making me blush... If you have any other questions, I'd be more than happy to fill you in; dont hesitate to reach out!</p>
       </div>
     </div> 
     <ul class="wrapper">
@@ -69,23 +69,24 @@
         <span class="tooltip">Mail</span>
         <span><a href="mailto:mailto:luke.alexander352@gmail.com" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a></span>
       </li>
-    </ul>
 
-    <div id="social-links-PFP">
-      <img class="profile-picture" src="assets/headshot.png"></div>
+      <div id="social-links-PFP">
+        <img class="profile-picture" src="assets/headshot.png"></div>
+
+    </ul>
 
     <div class="checkbox-container" style="position: absolute; top: -5px; right: 10px;">
       <input type="checkbox">
     </div>  
     <footer>
     </footer>
-  </body>
-  <script src="app.js"></script>
+    <script src="app.js"></script>
   <script 
   color="255,255,255" 
   opacity='1' 
   zIndex="-2" 
   count="110" 
-  src="canvas nest/dist/canvas-nest.js">
+  src="canvas nest/dist/canvas-nest.js" async>
 </script>
+  </body>
 </html>

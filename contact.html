@@ -15,11 +15,11 @@
     <header>
         <nav>
           <ul class="nav">
-            <li><a href="home.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="resume.html">resume</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a rel="preload" href="home.html" as="document">home</a></li>
+            <li><a rel="preload" href="about.html" as="document">about</a></li>
+            <li><a rel="preload" href="resume.html" as="document">resume</a></li>
+            <li><a rel="preload" href="projects.html" as="document">projects</a></li>
+            <li><a rel="preload" href="contact.html" as="document">contact</a></li>
           </ul>
         </nav>
       </header>      
@@ -46,10 +46,11 @@
         <span class="tooltip">Mail</span>
         <span><a href="mailto:mailto:luke.alexander352@gmail.com" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a></span>
       </li>
-    </ul>
 
-    <div id="social-links-PFP">
-      <img class="profile-picture" src="assets/headshot.png"></div>
+      <div id="social-links-PFP">
+        <img class="profile-picture" src="assets/headshot.png"></div>
+
+    </ul>
 
     <div id="contactSection">
       <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
@@ -73,13 +74,13 @@
     </div>  
     <footer>
     </footer>
-  </body>
   <script src="app.js"></script>
   <script 
-  color="255,255,255" 
-  opacity='1' 
-  zIndex="-2" 
-  count="110" 
-  src="canvas nest/dist/canvas-nest.js">
-</script>
+    color="255,255,255" 
+    opacity='1' 
+    zIndex="-2" 
+    count="110" 
+    src="canvas nest/dist/canvas-nest.js" async>
+  </script>
+  </body>
 </html>

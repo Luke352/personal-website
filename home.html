@@ -15,11 +15,11 @@
     <header>
         <nav>
           <ul class="nav">
-            <li><a href="home.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="resume.html">resume</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a rel="preload" href="home.html" as="document">home</a></li>
+            <li><a rel="preload" href="about.html" as="document">about</a></li>
+            <li><a rel="preload" href="resume.html" as="document">resume</a></li>
+            <li><a rel="preload" href="projects.html" as="document">projects</a></li>
+            <li><a rel="preload" href="contact.html" as="document">contact</a></li>
           </ul>
         </nav>
       </header>      
@@ -30,16 +30,16 @@
     <div class="checkbox-container" style="position: absolute; top: -5px; right: 10px;">
       <input type="checkbox">
     </div>  
-    <footer>
-      <p>Copyright © 2023 Luke Alexander</p>
-    </footer>
-  </body>
+  <footer>
+    <p>Copyright © 2023 Luke Alexander</p>
+  </footer>
   <script src="app.js"></script>
   <script 
-  color="255,255,255" 
-  opacity='1' 
-  zIndex="-2" 
-  count="110" 
-  src="canvas nest/dist/canvas-nest.js">
-</script>
+    color="255,255,255" 
+    opacity='1' 
+    zIndex="-2" 
+    count="110" 
+    src="canvas nest/dist/canvas-nest.js" async>
+  </script>
+  </body>
 </html>

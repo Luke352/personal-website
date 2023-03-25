@@ -10,38 +10,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap" rel="stylesheet">
+    <link rel="prefetch" href="home.html">
+    <link rel="prefetch" href="about.html">
+    <link rel="prefetch" href="resume.html">
+    <link rel="prefetch" href="projects.html">
+    <link rel="prefetch" href="contact.html">
   </head>
   <body>
     <header>
         <nav>
           <ul class="nav">
-            <li><a href="home.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="resume.html">resume</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a rel="preload" href="home.html" as="document">home</a></li>
+            <li><a rel="preload" href="about.html" as="document">about</a></li>
+            <li><a rel="preload" href="resume.html" as="document">resume</a></li>
+            <li><a rel="preload" href="projects.html" as="document">projects</a></li>
+            <li><a rel="preload" href="contact.html" as="document">contact</a></li>
           </ul>
         </nav>
       </header>      
     <main>
-    <img class="homepage-profile-picture" src="assets/headshot.png">
-    <audio id="typingSound" src="assets/typing.mp3"></audio>
-    <audio id="backspaceSound" src="assets/backspace.mp3"></audio>
-    <h1 id="text"></h1>     
     </main>
     <div class="checkbox-container" style="position: absolute; top: -5px; right: 10px;">
       <input type="checkbox">
     </div>  
-    <footer>
-      <p>Copyright © 2023 Luke Alexander</p>
-    </footer>
+  <footer>
+     <p>Copyright © 2023 Luke Alexander</p>
+  </footer>
+  <img class="homepage-profile-picture" type="image" src="assets/headshot.png">
+        <h1 id="text"></h1>
+        <div class="preloader-wrapper">
+          <div id="progress"></div>
+            <div class="center">
+              <div id="register">
+                <i id="progressButton" class="ion-android-arrow-forward next"></i>
+                  <div id="inputContainer">
+                    <input id="inputField" required autofocus />
+                      <label id="inputLabel"></label>
+                        <div id="inputProgress"></div>
+                  </div>
+               </div>
+            </div>
+        </div> 
+    <script src="app.js"></script>
+    <script 
+      color="255,255,255" 
+      opacity='1' 
+      zIndex="-2" 
+      count="110" 
+      src="canvas nest/dist/canvas-nest.js" async>
+    </script>
   </body>
-  <script src="app.js"></script>
-  <script 
-  color="255,255,255" 
-  opacity='1' 
-  zIndex="-2" 
-  count="110" 
-  src="canvas nest/dist/canvas-nest.js">
-</script>
 </html>

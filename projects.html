@@ -16,11 +16,11 @@
     <header>
         <nav>
           <ul class="nav">
-            <li><a href="home.html">home</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="resume.html">resume</a></li>
-            <li><a href="projects.html">projects</a></li>
-            <li><a href="contact.html">contact</a></li>
+            <li><a rel="preload" href="home.html" as="document">home</a></li>
+            <li><a rel="preload" href="about.html" as="document">about</a></li>
+            <li><a rel="preload" href="resume.html" as="document">resume</a></li>
+            <li><a rel="preload" href="projects.html" as="document">projects</a></li>
+            <li><a rel="preload" href="contact.html" as="document">contact</a></li>
           </ul>
         </nav>
       </header>      
@@ -47,45 +47,62 @@
         <span class="tooltip">Mail</span>
         <span><a href="mailto:mailto:luke.alexander352@gmail.com" target="_blank"><i class="fa-brands fa-google-plus-g"></i></a></span>
       </li>
+
+      <div id="social-links-PFP">
+        <img class="profile-picture" src="assets/headshot.png"></div>
+
     </ul>
 
-    <div id="social-links-PFP">
-      <img class="profile-picture" src="assets/headshot.png"></div>
+    
 
-    <div class="composition1">
-            <img class="composition1_photo composition1_photo--p1" src="assets/vscode-ss1.png"></img>
-            <img class="composition1_photo composition1_photo--p2" src="assets/vscode-ss3.png"></img>
-            <img class="composition1_photo composition1_photo--p3" src="assets/gh-repo-ss2.png"></img>
-            <img class="composition1_photo composition1_photo--p4" src="assets/gh-repo-ss1.png"></img>
-            <img class="composition1_photo composition1_photo--p5" src="assets/vscode-ss2.png"></img>
+    <div class="composition2">
+      <div class="gallery-wrap">
+        <div class="item item-1">
+          <span class="projects_tooltip">Portfolio Website</span>
+            <a href="https://luke-alexander.me" target="_blank" class="fill-div"></a>
+        </div>
+        <div class="item item-2">
+          <span class="projects_tooltip">Sample Project</span>
+            <a href="https://www.google.com/" target="_blank" class="fill-div"></a>
+        </div>
+        <div class="item item-3">
+          <span class="projects_tooltip">Exemple de Projet</span>
+            <a href="https://www.google.com" target="_blank" class="fill-div"></a>
+        </div>
+        <div class="item item-4">
+          <span class="projects_tooltip">Proyecto de Muestra</span>
+            <a href="https://www.google.com" target="_blank" class="fill-div"></a>
+        </div>
+        <div class="item item-5">
+          <span class="projects_tooltip">示例项目</span>
+            <a href="https://www.google.com" target="_blank" class="fill-div"></a>
+        </div>
+      </div>
+    </div>
 
-            <div class="card" tabindex="0">
-              <span class="card__infoicon">
-                <i class="fa fa-circle-info fa-lg"></i>
-              </span>
-              <h1 class="card__title">Current Project</h1>
-              <p class="card__description">I'm currently working on my pilot project, which is the website you're interacting with right now!</p>
-              
-              <p class="card__credits"></p>
-              
-              <p class="card__description">Check out my Github, for a deeper look into the source code!</p>
-            </div>
-    </div>    
+  <div class="card" tabindex="0">
+    <span class="card__infoicon">
+      <i class="fa fa-circle-info fa-lg"></i>
+    </span>
+      <h1 class="card__title">Current Project</h1>
+        <p class="card__description">I'm currently working on my pilot project; the website you're interacting with right now!</p>
+          <p class="card__credits"></p>
+            <p class="card__description">Check out my Github, for a deeper look into the source code!</p>
+  </div>
+       
     <div class="checkbox-container" style="position: absolute; top: -5px; right: 10px;">
       <input type="checkbox">
     </div> 
     <footer>
     </footer>
-  </body>
-  <script src="app.js"></script>
+  
+    <script src="app.js"></script>
   <script 
   color="255,255,255" 
   opacity='1' 
   zIndex="-2" 
   count="110" 
-  src="canvas nest/dist/canvas-nest.js">
+  src="canvas nest/dist/canvas-nest.js" async>
   </script>
-  <script type="module">
-  import { Octokit, App } from "https://cdn.skypack.dev/octokit";
-  </script>
+  </body>
 </html>
